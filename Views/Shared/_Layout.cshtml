@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -13,8 +14,8 @@
         @DateTime.Now;
 
         <center>
-            <a href="/Home/Index" class="btn btn-primary">
-                Home
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+            Home
             </a>
             <a href="/Home/AboutUs" class="btn btn-warning">
                 AboutUs
@@ -31,6 +32,10 @@
             <a href="/Account.Register" class="btn btn-primary">
                 Register
             </a>
+            @*Html Helper Metods*@
+
+            @*Html TagHelper Metods*@
+
         </center>
 
     </nav>
