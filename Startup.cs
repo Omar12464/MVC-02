@@ -28,20 +28,21 @@ namespace MVC_02
             }
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-                endpoints.MapGet("/Hello", async context =>
-                {
-                    await context.Response.WriteAsync("Helloo");
-                });
+                //endpoints.MapGet("/", async context =>
+                //{
+                //    await context.Response.WriteAsync("Hello World!");
+                //});
+                //endpoints.MapGet("/Hello", async context =>
+                //{
+                //    await context.Response.WriteAsync("Helloo");
+                //});
                 endpoints.MapControllerRoute(
                  name: "default",
-                 pattern: "{controller=Movie}/{action=GetMovie}/{id:int?}"
+                 pattern: "{controller=Home}/{action=Index}/{id:int?}"
                 );
             });
         }
