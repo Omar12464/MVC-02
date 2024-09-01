@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AboutUs</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    @*Start Header*@
+    <nav>
+        @DateTime.Now;
+
+        <center>
+            <a href="/Home/Index" class="btn btn-primary">
+                Home
+            </a>
+            <a href="/Home/AboutUs" class="btn btn-warning">
+                AboutUs
+            </a>
+            <a href="/Home/Privacy" class="btn btn-success">
+                Privacy
+            </a>
+            <a href="/Home/ContactUs" class="btn btn-light">
+                ContactUs
+            </a>
+            <a href="/Account/Login" class="btn btn-danger">
+                Login
+            </a>
+            <a href="/Account.Register" class="btn btn-primary">
+                Register
+            </a>
+        </center>
+
+    </nav>
+    @*End Header*@
+    <div>
+        @RenderBody()
+    </div>
+    @*Start Footer*@
+    <footer>
+        <center>
+            <div>
+                <p>copyrights &copy; for Route @DateTime.Now.Year</p>
+                <p></p>
+            </div>
+        </center>
+    </footer>
+    @*End Footer*@
+</body>
+</html>
